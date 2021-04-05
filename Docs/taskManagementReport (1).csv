@@ -1,0 +1,3 @@
+Id,Name,Description,StartDate,FinishDate,State
+1,Code Entity Framework updated 6x,Code the EF part of the project,04/04/2021 23:51:40,05/04/2021 00:00:00,InProgress
+2,Post man testing work,Test all the endpoints project,04/04/2021 23:51:40,04/04/2021 00:00:00,InProgress

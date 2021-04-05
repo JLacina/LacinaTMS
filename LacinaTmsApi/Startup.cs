@@ -4,8 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using LacinaTmsApi.Data.Migrations;
 using LacinaTmsApi.Services;
-using Microsoft.EntityFrameworkCore;
-
 
 namespace LacinaTmsApi
 {

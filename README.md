@@ -61,8 +61,8 @@ Follow these steps to get your development environment set up:
 
   And run add migration using Package Management Console:
    ```
-   PM> <b>Add-Migration Initial
-   PM> <b>Update-Database 
+   PM> Add-Migration Initial
+   PM> Update-Database 
    ```
 
 3.   Find Postman collection that include 11 requests:

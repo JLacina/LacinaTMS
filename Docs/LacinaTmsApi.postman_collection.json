@@ -1,0 +1,3248 @@
+{
+	"info": {
+		"_postman_id": "ffb628bc-5d72-421c-a871-a3bb8b02c5d0",
+		"name": "LacinaTmsApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "0.01 Get all Main Tasks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*",
+							"pm.test(\"responseBodyDebug: \".concat(responseBody));",
+							"",
+							"pm.test(\"Response code should be okay for processing\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"if (responseCode.code === 200) {",
+							"    try {",
+							"        var r = JSON.parse(responseBody);",
+							"        if (r.status === \"error\") {",
+							"        tests['Companies ware found by successfully'] = false;",
+							"            return;",
+							"        }",
+							"        tests['Companies ware found by successfull'] = true;",
+							"    } catch (e) {",
+							"        console.log(e);",
+							"         tests['Companies ware found by successfull'] = false;",
+							"    }",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "app-user {{auth}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44386/api/tasks",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SampleSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "uas-user {{auth}}",
+								"type": "text",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/updatebilling?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"updatebilling"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Aug 2016 22:38:25 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.15 (Oracle)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/5.6.17",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-2017484664%7CMCMID%7C04510430431823448452725826817415973470%7CMCAID%7CNONE",
+							"key": "AMCV_generalmotors%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "793872103%7CMCIDTS%7C16954%7CMCMID%7C27110026278515577530094938005953959160%7CMCAAMLH-1465428191%7C7%7CMCAAMB-1465428191%7CNRX38WO0n5BH8Th-nqAG_A%7CMCAID%7C2B63A33D8507A734-60000110C01ED79B",
+							"key": "AMCV_78381CFE532B22D20A490D45%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "GA1.2.128505815.1460995000",
+							"key": "_ga"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "u4rcr06d86thg6bc8j7t3rfb05",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "3D31CF4866E50A85-2FB3B11F410AD5C5",
+							"key": "s_fid"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "%5B%5BB%5D%5D",
+							"key": "s_sq"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "true",
+							"key": "s_cc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "PHPSTORM",
+							"key": "XDEBUG_SESSION"
+						}
+					],
+					"body": "{\"status\":\"success\",\"data\":{\"scriptUrl\":\"https:\\/\\/test.planetpaymentgateway.com\\/v1\\/paymentWidgets.js?checkoutId=CF4BB08C3E9257E672FA285898E0FEAE.sbg-vm-tx02\",\"userGuid\":\"FF9AD127-A269-4566-B542-51648F158DBE\"}}"
+				}
+			]
+		},
+		{
+			"name": "0.02 Get MainTask by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*",
+							"pm.test(\"responseBodyDebug: \".concat(responseBody));",
+							"",
+							"pm.test(\"Response code should be okay for processing\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"if (responseCode.code === 200) {",
+							"    try {",
+							"        var r = JSON.parse(responseBody);",
+							"        if (r.status === \"error\") {",
+							"        tests['Companies ware found by successfully'] = false;",
+							"            return;",
+							"        }",
+							"        tests['Companies ware found by successfull'] = true;",
+							"    } catch (e) {",
+							"        console.log(e);",
+							"         tests['Companies ware found by successfull'] = false;",
+							"    }",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "app-user {{auth}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44386/api/tasks/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SampleSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "uas-user {{auth}}",
+								"type": "text",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/updatebilling?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"updatebilling"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Aug 2016 22:38:25 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.15 (Oracle)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/5.6.17",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-2017484664%7CMCMID%7C04510430431823448452725826817415973470%7CMCAID%7CNONE",
+							"key": "AMCV_generalmotors%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "793872103%7CMCIDTS%7C16954%7CMCMID%7C27110026278515577530094938005953959160%7CMCAAMLH-1465428191%7C7%7CMCAAMB-1465428191%7CNRX38WO0n5BH8Th-nqAG_A%7CMCAID%7C2B63A33D8507A734-60000110C01ED79B",
+							"key": "AMCV_78381CFE532B22D20A490D45%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "GA1.2.128505815.1460995000",
+							"key": "_ga"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "u4rcr06d86thg6bc8j7t3rfb05",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "3D31CF4866E50A85-2FB3B11F410AD5C5",
+							"key": "s_fid"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "%5B%5BB%5D%5D",
+							"key": "s_sq"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "true",
+							"key": "s_cc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "PHPSTORM",
+							"key": "XDEBUG_SESSION"
+						}
+					],
+					"body": "{\"status\":\"success\",\"data\":{\"scriptUrl\":\"https:\\/\\/test.planetpaymentgateway.com\\/v1\\/paymentWidgets.js?checkoutId=CF4BB08C3E9257E672FA285898E0FEAE.sbg-vm-tx02\",\"userGuid\":\"FF9AD127-A269-4566-B542-51648F158DBE\"}}"
+				},
+				{
+					"name": "0.02 Get all Main Tasks by Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "app-user {{auth}}",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44365/api/tasks/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44365",
+							"path": [
+								"api",
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Apr 2021 23:24:57 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Code Entity Framework\",\n    \"description\": \"Code the EF part of the project\",\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\n    \"finishDate\": \"2021-04-04T00:00:00\",\n    \"state\": 1,\n    \"subTasks\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "0.03 POST new MainTasks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*",
+							"pm.test(\"responseBodyDebug: \".concat(responseBody));",
+							"",
+							"pm.test(\"Response code should be okay for processing\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"if (responseCode.code === 200) {",
+							"    try {",
+							"        var r = JSON.parse(responseBody);",
+							"        if (r.status === \"error\") {",
+							"        tests['Companies ware found by successfully'] = false;",
+							"            return;",
+							"        }",
+							"        tests['Companies ware found by successfull'] = true;",
+							"    } catch (e) {",
+							"        console.log(e);",
+							"         tests['Companies ware found by successfull'] = false;",
+							"    }",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "app-user {{auth}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Devloper testing work\",\r\n    \"description\": \"Test all the endpoints project\",\r\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\r\n    \"finishDate\": \"2021-04-04T00:00:00\",\r\n    \"state\": null\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44386/api/tasks",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SampleSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "uas-user {{auth}}",
+								"type": "text",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/updatebilling?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"updatebilling"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Aug 2016 22:38:25 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.15 (Oracle)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/5.6.17",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-2017484664%7CMCMID%7C04510430431823448452725826817415973470%7CMCAID%7CNONE",
+							"key": "AMCV_generalmotors%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "793872103%7CMCIDTS%7C16954%7CMCMID%7C27110026278515577530094938005953959160%7CMCAAMLH-1465428191%7C7%7CMCAAMB-1465428191%7CNRX38WO0n5BH8Th-nqAG_A%7CMCAID%7C2B63A33D8507A734-60000110C01ED79B",
+							"key": "AMCV_78381CFE532B22D20A490D45%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "GA1.2.128505815.1460995000",
+							"key": "_ga"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "u4rcr06d86thg6bc8j7t3rfb05",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "3D31CF4866E50A85-2FB3B11F410AD5C5",
+							"key": "s_fid"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "%5B%5BB%5D%5D",
+							"key": "s_sq"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "true",
+							"key": "s_cc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "PHPSTORM",
+							"key": "XDEBUG_SESSION"
+						}
+					],
+					"body": "{\"status\":\"success\",\"data\":{\"scriptUrl\":\"https:\\/\\/test.planetpaymentgateway.com\\/v1\\/paymentWidgets.js?checkoutId=CF4BB08C3E9257E672FA285898E0FEAE.sbg-vm-tx02\",\"userGuid\":\"FF9AD127-A269-4566-B542-51648F158DBE\"}}"
+				},
+				{
+					"name": "0.03 POST all Main Tasks",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "app-user {{auth}}",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Post man testing work\",\r\n    \"description\": \"Test all the endpoints project\",\r\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\r\n    \"finishDate\": \"2021-04-04T00:00:00\",\r\n    \"state\": null\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44365/api/tasks",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44365",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Apr 2021 23:28:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"Post man testing work\",\n    \"description\": \"Test all the endpoints project\",\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\n    \"finishDate\": \"2021-04-04T00:00:00\",\n    \"state\": null,\n    \"subTasks\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "0.04 Delte MainTasks using ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*",
+							"pm.test(\"responseBodyDebug: \".concat(responseBody));",
+							"",
+							"pm.test(\"Response code should be okay for processing\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"if (responseCode.code === 200) {",
+							"    try {",
+							"        var r = JSON.parse(responseBody);",
+							"        if (r.status === \"error\") {",
+							"        tests['Companies ware found by successfully'] = false;",
+							"            return;",
+							"        }",
+							"        tests['Companies ware found by successfull'] = true;",
+							"    } catch (e) {",
+							"        console.log(e);",
+							"         tests['Companies ware found by successfull'] = false;",
+							"    }",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "app-user {{auth}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44386/api/tasks/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "0.03 POST all Main Tasks",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "app-user {{auth}}",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Post man testing work\",\r\n    \"description\": \"Test all the endpoints project\",\r\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\r\n    \"finishDate\": \"2021-04-04T00:00:00\",\r\n    \"state\": null\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44365/api/tasks",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44365",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Apr 2021 23:28:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"Post man testing work\",\n    \"description\": \"Test all the endpoints project\",\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\n    \"finishDate\": \"2021-04-04T00:00:00\",\n    \"state\": null,\n    \"subTasks\": []\n}"
+				},
+				{
+					"name": "SampleSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "uas-user {{auth}}",
+								"type": "text",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/updatebilling?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"updatebilling"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Aug 2016 22:38:25 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.15 (Oracle)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/5.6.17",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-2017484664%7CMCMID%7C04510430431823448452725826817415973470%7CMCAID%7CNONE",
+							"key": "AMCV_generalmotors%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "793872103%7CMCIDTS%7C16954%7CMCMID%7C27110026278515577530094938005953959160%7CMCAAMLH-1465428191%7C7%7CMCAAMB-1465428191%7CNRX38WO0n5BH8Th-nqAG_A%7CMCAID%7C2B63A33D8507A734-60000110C01ED79B",
+							"key": "AMCV_78381CFE532B22D20A490D45%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "GA1.2.128505815.1460995000",
+							"key": "_ga"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "u4rcr06d86thg6bc8j7t3rfb05",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "3D31CF4866E50A85-2FB3B11F410AD5C5",
+							"key": "s_fid"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "%5B%5BB%5D%5D",
+							"key": "s_sq"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "true",
+							"key": "s_cc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "PHPSTORM",
+							"key": "XDEBUG_SESSION"
+						}
+					],
+					"body": "{\"status\":\"success\",\"data\":{\"scriptUrl\":\"https:\\/\\/test.planetpaymentgateway.com\\/v1\\/paymentWidgets.js?checkoutId=CF4BB08C3E9257E672FA285898E0FEAE.sbg-vm-tx02\",\"userGuid\":\"FF9AD127-A269-4566-B542-51648F158DBE\"}}"
+				}
+			]
+		},
+		{
+			"name": "0.05 PUT existing Main Tasks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*",
+							"pm.test(\"responseBodyDebug: \".concat(responseBody));",
+							"",
+							"pm.test(\"Response code should be okay for processing\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"if (responseCode.code === 200) {",
+							"    try {",
+							"        var r = JSON.parse(responseBody);",
+							"        if (r.status === \"error\") {",
+							"        tests['Companies ware found by successfully'] = false;",
+							"            return;",
+							"        }",
+							"        tests['Companies ware found by successfull'] = true;",
+							"    } catch (e) {",
+							"        console.log(e);",
+							"         tests['Companies ware found by successfull'] = false;",
+							"    }",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "app-user {{auth}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Code Entity Framework updated 2x\",\r\n    \"description\": \"Code the EF part of the project\",\r\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\r\n    \"finishDate\": \"2021-04-05T00:00:00\",\r\n    \"state\": 1,\r\n    \"subTasks\": []\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44386/api/tasks/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SampleSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "uas-user {{auth}}",
+								"type": "text",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/updatebilling?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"updatebilling"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Aug 2016 22:38:25 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.15 (Oracle)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/5.6.17",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-2017484664%7CMCMID%7C04510430431823448452725826817415973470%7CMCAID%7CNONE",
+							"key": "AMCV_generalmotors%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "793872103%7CMCIDTS%7C16954%7CMCMID%7C27110026278515577530094938005953959160%7CMCAAMLH-1465428191%7C7%7CMCAAMB-1465428191%7CNRX38WO0n5BH8Th-nqAG_A%7CMCAID%7C2B63A33D8507A734-60000110C01ED79B",
+							"key": "AMCV_78381CFE532B22D20A490D45%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "GA1.2.128505815.1460995000",
+							"key": "_ga"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "u4rcr06d86thg6bc8j7t3rfb05",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "3D31CF4866E50A85-2FB3B11F410AD5C5",
+							"key": "s_fid"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "%5B%5BB%5D%5D",
+							"key": "s_sq"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "true",
+							"key": "s_cc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "PHPSTORM",
+							"key": "XDEBUG_SESSION"
+						}
+					],
+					"body": "{\"status\":\"success\",\"data\":{\"scriptUrl\":\"https:\\/\\/test.planetpaymentgateway.com\\/v1\\/paymentWidgets.js?checkoutId=CF4BB08C3E9257E672FA285898E0FEAE.sbg-vm-tx02\",\"userGuid\":\"FF9AD127-A269-4566-B542-51648F158DBE\"}}"
+				},
+				{
+					"name": "0.03 POST new Main Tasks",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "app-user {{auth}}",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Post man testing work\",\r\n    \"description\": \"Test all the endpoints project\",\r\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\r\n    \"finishDate\": \"2021-04-04T00:00:00\",\r\n    \"state\": null\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44365/api/tasks",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44365",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Apr 2021 23:28:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"Post man testing work\",\n    \"description\": \"Test all the endpoints project\",\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\n    \"finishDate\": \"2021-04-04T00:00:00\",\n    \"state\": null,\n    \"subTasks\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "0.06 POST new SubTasks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*",
+							"pm.test(\"responseBodyDebug: \".concat(responseBody));",
+							"",
+							"pm.test(\"Response code should be okay for processing\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"if (responseCode.code === 200) {",
+							"    try {",
+							"        var r = JSON.parse(responseBody);",
+							"        if (r.status === \"error\") {",
+							"        tests['Companies ware found by successfully'] = false;",
+							"            return;",
+							"        }",
+							"        tests['Companies ware found by successfull'] = true;",
+							"    } catch (e) {",
+							"        console.log(e);",
+							"         tests['Companies ware found by successfull'] = false;",
+							"    }",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "app-user {{auth}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sub Task 1 for Developer testing work\",\r\n    \"description\": \"Test all the endpoints project\",\r\n    \"startDate\": \"2021-04-05T23:51:40.5625495\",\r\n    \"finishDate\": \"2021-04-05T00:00:00\",\r\n    \"state\": 0,\r\n    \"MainTaskId\" : 1\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44386/api/tasks/1/subtasks",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks",
+						"1",
+						"subtasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SampleSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "uas-user {{auth}}",
+								"type": "text",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/updatebilling?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"updatebilling"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Aug 2016 22:38:25 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.15 (Oracle)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/5.6.17",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-2017484664%7CMCMID%7C04510430431823448452725826817415973470%7CMCAID%7CNONE",
+							"key": "AMCV_generalmotors%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "793872103%7CMCIDTS%7C16954%7CMCMID%7C27110026278515577530094938005953959160%7CMCAAMLH-1465428191%7C7%7CMCAAMB-1465428191%7CNRX38WO0n5BH8Th-nqAG_A%7CMCAID%7C2B63A33D8507A734-60000110C01ED79B",
+							"key": "AMCV_78381CFE532B22D20A490D45%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "GA1.2.128505815.1460995000",
+							"key": "_ga"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "u4rcr06d86thg6bc8j7t3rfb05",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "3D31CF4866E50A85-2FB3B11F410AD5C5",
+							"key": "s_fid"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "%5B%5BB%5D%5D",
+							"key": "s_sq"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "true",
+							"key": "s_cc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "PHPSTORM",
+							"key": "XDEBUG_SESSION"
+						}
+					],
+					"body": "{\"status\":\"success\",\"data\":{\"scriptUrl\":\"https:\\/\\/test.planetpaymentgateway.com\\/v1\\/paymentWidgets.js?checkoutId=CF4BB08C3E9257E672FA285898E0FEAE.sbg-vm-tx02\",\"userGuid\":\"FF9AD127-A269-4566-B542-51648F158DBE\"}}"
+				},
+				{
+					"name": "0.03 POST all Main Tasks",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "app-user {{auth}}",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Post man testing work\",\r\n    \"description\": \"Test all the endpoints project\",\r\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\r\n    \"finishDate\": \"2021-04-04T00:00:00\",\r\n    \"state\": null\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44365/api/tasks",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44365",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Apr 2021 23:28:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"Post man testing work\",\n    \"description\": \"Test all the endpoints project\",\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\n    \"finishDate\": \"2021-04-04T00:00:00\",\n    \"state\": null,\n    \"subTasks\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "0.07 Get SubTasks by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*",
+							"pm.test(\"responseBodyDebug: \".concat(responseBody));",
+							"",
+							"pm.test(\"Response code should be okay for processing\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"if (responseCode.code === 200) {",
+							"    try {",
+							"        var r = JSON.parse(responseBody);",
+							"        if (r.status === \"error\") {",
+							"        tests['Companies ware found by successfully'] = false;",
+							"            return;",
+							"        }",
+							"        tests['Companies ware found by successfull'] = true;",
+							"    } catch (e) {",
+							"        console.log(e);",
+							"         tests['Companies ware found by successfull'] = false;",
+							"    }",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "app-user {{auth}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44386/api/tasks/1/subtasks/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks",
+						"1",
+						"subtasks",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "0.02 Get all Main Tasks by Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "app-user {{auth}}",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44365/api/tasks/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44365",
+							"path": [
+								"api",
+								"tasks",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Apr 2021 23:24:57 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Code Entity Framework\",\n    \"description\": \"Code the EF part of the project\",\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\n    \"finishDate\": \"2021-04-04T00:00:00\",\n    \"state\": 1,\n    \"subTasks\": []\n}"
+				},
+				{
+					"name": "SampleSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "uas-user {{auth}}",
+								"type": "text",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/updatebilling?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"updatebilling"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Aug 2016 22:38:25 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.15 (Oracle)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/5.6.17",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-2017484664%7CMCMID%7C04510430431823448452725826817415973470%7CMCAID%7CNONE",
+							"key": "AMCV_generalmotors%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "793872103%7CMCIDTS%7C16954%7CMCMID%7C27110026278515577530094938005953959160%7CMCAAMLH-1465428191%7C7%7CMCAAMB-1465428191%7CNRX38WO0n5BH8Th-nqAG_A%7CMCAID%7C2B63A33D8507A734-60000110C01ED79B",
+							"key": "AMCV_78381CFE532B22D20A490D45%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "GA1.2.128505815.1460995000",
+							"key": "_ga"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "u4rcr06d86thg6bc8j7t3rfb05",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "3D31CF4866E50A85-2FB3B11F410AD5C5",
+							"key": "s_fid"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "%5B%5BB%5D%5D",
+							"key": "s_sq"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "true",
+							"key": "s_cc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "PHPSTORM",
+							"key": "XDEBUG_SESSION"
+						}
+					],
+					"body": "{\"status\":\"success\",\"data\":{\"scriptUrl\":\"https:\\/\\/test.planetpaymentgateway.com\\/v1\\/paymentWidgets.js?checkoutId=CF4BB08C3E9257E672FA285898E0FEAE.sbg-vm-tx02\",\"userGuid\":\"FF9AD127-A269-4566-B542-51648F158DBE\"}}"
+				}
+			]
+		},
+		{
+			"name": "0.08 Get all SubTasks for a Parent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*",
+							"pm.test(\"responseBodyDebug: \".concat(responseBody));",
+							"",
+							"pm.test(\"Response code should be okay for processing\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"if (responseCode.code === 200) {",
+							"    try {",
+							"        var r = JSON.parse(responseBody);",
+							"        if (r.status === \"error\") {",
+							"        tests['Companies ware found by successfully'] = false;",
+							"            return;",
+							"        }",
+							"        tests['Companies ware found by successfull'] = true;",
+							"    } catch (e) {",
+							"        console.log(e);",
+							"         tests['Companies ware found by successfull'] = false;",
+							"    }",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "app-user {{auth}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44386/api/tasks/1/subtasks",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks",
+						"1",
+						"subtasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SampleSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "uas-user {{auth}}",
+								"type": "text",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/updatebilling?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"updatebilling"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Aug 2016 22:38:25 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.15 (Oracle)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/5.6.17",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-2017484664%7CMCMID%7C04510430431823448452725826817415973470%7CMCAID%7CNONE",
+							"key": "AMCV_generalmotors%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "793872103%7CMCIDTS%7C16954%7CMCMID%7C27110026278515577530094938005953959160%7CMCAAMLH-1465428191%7C7%7CMCAAMB-1465428191%7CNRX38WO0n5BH8Th-nqAG_A%7CMCAID%7C2B63A33D8507A734-60000110C01ED79B",
+							"key": "AMCV_78381CFE532B22D20A490D45%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "GA1.2.128505815.1460995000",
+							"key": "_ga"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "u4rcr06d86thg6bc8j7t3rfb05",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "3D31CF4866E50A85-2FB3B11F410AD5C5",
+							"key": "s_fid"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "%5B%5BB%5D%5D",
+							"key": "s_sq"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "true",
+							"key": "s_cc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "PHPSTORM",
+							"key": "XDEBUG_SESSION"
+						}
+					],
+					"body": "{\"status\":\"success\",\"data\":{\"scriptUrl\":\"https:\\/\\/test.planetpaymentgateway.com\\/v1\\/paymentWidgets.js?checkoutId=CF4BB08C3E9257E672FA285898E0FEAE.sbg-vm-tx02\",\"userGuid\":\"FF9AD127-A269-4566-B542-51648F158DBE\"}}"
+				}
+			]
+		},
+		{
+			"name": "0.09 Delte SubTasks using ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*",
+							"pm.test(\"responseBodyDebug: \".concat(responseBody));",
+							"",
+							"pm.test(\"Response code should be okay for processing\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"if (responseCode.code === 200) {",
+							"    try {",
+							"        var r = JSON.parse(responseBody);",
+							"        if (r.status === \"error\") {",
+							"        tests['Companies ware found by successfully'] = false;",
+							"            return;",
+							"        }",
+							"        tests['Companies ware found by successfull'] = true;",
+							"    } catch (e) {",
+							"        console.log(e);",
+							"         tests['Companies ware found by successfull'] = false;",
+							"    }",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "app-user {{auth}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44386/api/tasks/1/subtasks/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks",
+						"1",
+						"subtasks",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SampleSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "uas-user {{auth}}",
+								"type": "text",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/updatebilling?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"updatebilling"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Aug 2016 22:38:25 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.15 (Oracle)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/5.6.17",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-2017484664%7CMCMID%7C04510430431823448452725826817415973470%7CMCAID%7CNONE",
+							"key": "AMCV_generalmotors%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "793872103%7CMCIDTS%7C16954%7CMCMID%7C27110026278515577530094938005953959160%7CMCAAMLH-1465428191%7C7%7CMCAAMB-1465428191%7CNRX38WO0n5BH8Th-nqAG_A%7CMCAID%7C2B63A33D8507A734-60000110C01ED79B",
+							"key": "AMCV_78381CFE532B22D20A490D45%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "GA1.2.128505815.1460995000",
+							"key": "_ga"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "u4rcr06d86thg6bc8j7t3rfb05",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "3D31CF4866E50A85-2FB3B11F410AD5C5",
+							"key": "s_fid"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "%5B%5BB%5D%5D",
+							"key": "s_sq"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "true",
+							"key": "s_cc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "PHPSTORM",
+							"key": "XDEBUG_SESSION"
+						}
+					],
+					"body": "{\"status\":\"success\",\"data\":{\"scriptUrl\":\"https:\\/\\/test.planetpaymentgateway.com\\/v1\\/paymentWidgets.js?checkoutId=CF4BB08C3E9257E672FA285898E0FEAE.sbg-vm-tx02\",\"userGuid\":\"FF9AD127-A269-4566-B542-51648F158DBE\"}}"
+				},
+				{
+					"name": "0.03 POST all Main Tasks",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "app-user {{auth}}",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Post man testing work\",\r\n    \"description\": \"Test all the endpoints project\",\r\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\r\n    \"finishDate\": \"2021-04-04T00:00:00\",\r\n    \"state\": null\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44365/api/tasks",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44365",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Apr 2021 23:28:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"Post man testing work\",\n    \"description\": \"Test all the endpoints project\",\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\n    \"finishDate\": \"2021-04-04T00:00:00\",\n    \"state\": null,\n    \"subTasks\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "0.10 PUT existing SubTasks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/*",
+							"pm.test(\"responseBodyDebug: \".concat(responseBody));",
+							"",
+							"pm.test(\"Response code should be okay for processing\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"if (responseCode.code === 200) {",
+							"    try {",
+							"        var r = JSON.parse(responseBody);",
+							"        if (r.status === \"error\") {",
+							"        tests['Companies ware found by successfully'] = false;",
+							"            return;",
+							"        }",
+							"        tests['Companies ware found by successfull'] = true;",
+							"    } catch (e) {",
+							"        console.log(e);",
+							"         tests['Companies ware found by successfull'] = false;",
+							"    }",
+							"}",
+							"*/",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "app-user {{auth}}",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n        \"id\": 2,\r\n        \"name\": \"Sub Task for Post man testing work Updated 2x\",\r\n        \"description\": \"Test all the endpoints projec\",\r\n        \"startDate\": \"2021-04-04T23:51:40.5625495\",\r\n        \"finishDate\": \"2021-04-04T23:51:40.5625495\",\r\n        \"state\": 0,\r\n        \"mainTaskId\": 1\r\n    }"
+				},
+				"url": {
+					"raw": "https://localhost:44386/api/tasks/1/subtasks/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks",
+						"1",
+						"subtasks",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SampleSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "uas-user {{auth}}",
+								"type": "text",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/updatebilling?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"updatebilling"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "javascript",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 31 Aug 2016 22:38:25 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT",
+							"name": "Expires",
+							"description": "Gives the date/time after which the response is considered stale"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache",
+							"name": "Pragma",
+							"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.2.15 (Oracle)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/5.6.17",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-2017484664%7CMCMID%7C04510430431823448452725826817415973470%7CMCAID%7CNONE",
+							"key": "AMCV_generalmotors%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "793872103%7CMCIDTS%7C16954%7CMCMID%7C27110026278515577530094938005953959160%7CMCAAMLH-1465428191%7C7%7CMCAAMB-1465428191%7CNRX38WO0n5BH8Th-nqAG_A%7CMCAID%7C2B63A33D8507A734-60000110C01ED79B",
+							"key": "AMCV_78381CFE532B22D20A490D45%40AdobeOrg"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "GA1.2.128505815.1460995000",
+							"key": "_ga"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "u4rcr06d86thg6bc8j7t3rfb05",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "3D31CF4866E50A85-2FB3B11F410AD5C5",
+							"key": "s_fid"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "%5B%5BB%5D%5D",
+							"key": "s_sq"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": false,
+							"httpOnly": false,
+							"domain": ".gm.com",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "true",
+							"key": "s_cc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "api.carshare.gm.com",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "PHPSTORM",
+							"key": "XDEBUG_SESSION"
+						}
+					],
+					"body": "{\"status\":\"success\",\"data\":{\"scriptUrl\":\"https:\\/\\/test.planetpaymentgateway.com\\/v1\\/paymentWidgets.js?checkoutId=CF4BB08C3E9257E672FA285898E0FEAE.sbg-vm-tx02\",\"userGuid\":\"FF9AD127-A269-4566-B542-51648F158DBE\"}}"
+				},
+				{
+					"name": "0.03 POST new Main Tasks",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "app-user {{auth}}",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Post man testing work\",\r\n    \"description\": \"Test all the endpoints project\",\r\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\r\n    \"finishDate\": \"2021-04-04T00:00:00\",\r\n    \"state\": null\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44365/api/tasks",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44365",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Apr 2021 23:28:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"name\": \"Post man testing work\",\n    \"description\": \"Test all the endpoints project\",\n    \"startDate\": \"2021-04-04T23:51:40.5625495\",\n    \"finishDate\": \"2021-04-04T00:00:00\",\n    \"state\": null,\n    \"subTasks\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "0.11 Get Report Export (use in Google Chrome)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44386/api/tasks/report/export?StartDate=2021-04-04T10:34",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks",
+						"report",
+						"export"
+					],
+					"query": [
+						{
+							"key": "StartDate",
+							"value": "2021-04-04T10:34"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Don't use it! (endpoint for dev testing report data)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44386/api/tasks/report?StartDate=2021-04-04T10:34",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"tasks",
+						"report"
+					],
+					"query": [
+						{
+							"key": "StartDate",
+							"value": "2021-04-04T10:34"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

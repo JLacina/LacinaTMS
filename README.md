@@ -38,7 +38,7 @@ Follow these steps to get your development environment set up:
      ```
 	 dotnet run
 	 ```
- 5. App will run at  [https://localhost:44386/api/tasks)
+ 5. App will run at  https://localhost:44386/api/tasks
   
 
 

@@ -16,11 +16,11 @@ Use these instructions to get the project up and running.
 ### Prerequisites
 You will need the following tools:
 
-* [Visual Studio 2019] https://www.visualstudio.com/downloads/
-* [SQL Server® 2014 Express] https://www.microsoft.com/en-ie/download/details.aspx?id=42299
-* [SQL Server Management Studio (SSMS)] https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017
-* [.NET Core SDK 3.1 https://dotnet.microsoft.com/download/dotnet
-* [Postman for Windows] https://www.getpostman.com/downloads/
+* Visual Studio 2019 https://www.visualstudio.com/downloads/
+* SQL Server® 2014 Express https://www.microsoft.com/en-ie/download/details.aspx?id=42299
+* SQL Server Management Studio (SSMS) https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017
+* .NET Core SDK 3.1 https://dotnet.microsoft.com/download/dotnet
+* Postman for Windows https://www.getpostman.com/downloads/
 
 ### Setup
 Follow these steps to get your development environment set up:  

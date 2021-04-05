@@ -1,4 +1,4 @@
-# Task Management System (TMS) Coding challenge ilay (Jacek Lacina)
+# Task Management System (TMS) Coding challenge Ilay (Jacek Lacina)
 First release of this Microservice would consist of API - LacinaTmsApi developed using:  
 * netcoreapp3.1, 
 * Microsoft.EntityFrameworkCore.Design  (3.1.6)
@@ -66,17 +66,17 @@ Follow these steps to get your development environment set up:
    ```
 
 3.   Find Postman collection that include 11 requests:
-      0.01 Get all Main Tasks            https://localhost:44386/api/tasks 
-	  0.02 Get MainTask by ID            https://localhost:44386/api/tasks/1
-      0.03 POST new MainTasks            https://localhost:44386/api/tasks
-	  0.04 Delete MainTasks using ID      https://localhost:44386/api/tasks/3
-	  0.05 PUT existing Main Tasks       https://localhost:44386/api/tasks/1
-	  0.06 POST new SubTasks             https://localhost:44386/api/tasks/1/subtasks
-	  0.07 Get SubTasks by ID            https://localhost:44386/api/tasks/1/subtasks/1 
-	  0.08 Get all SubTasks for a Parent https://localhost:44386/api/tasks/1/subtasks
-	  0.09 Delete SubTasks using ID       https://localhost:44386/api/tasks/1/subtasks/3
-	  0.10 PUT existing SubTasks         https://localhost:44386/api/tasks/1/subtasks/2
-	  0.11 Get Report Export (use in Google Chrome)  https://localhost:44386/api/tasks/report/export?StartDate=2021-04-04T10:34
+      0.01 Get all Main Tasks             https://localhost:44386/api/tasks 
+      0.02 Get MainTask by ID             https://localhost:44386/api/tasks/1
+      0.03 POST new MainTasks             https://localhost:44386/api/tasks 
+      0.04 Delete MainTasks using ID      https://localhost:44386/api/tasks/3
+      0.05 PUT existing Main Tasks        https://localhost:44386/api/tasks/1
+      0.06 POST new SubTasks              https://localhost:44386/api/tasks/1/subtasks
+      0.07 Get SubTasks by ID             https://localhost:44386/api/tasks/1/subtasks/1 
+      0.08 Get all SubTasks for a Parent  https://localhost:44386/api/tasks/1/subtasks
+      0.09 Delete SubTasks using ID       https://localhost:44386/api/tasks/1/subtasks/3
+      0.10 PUT existing SubTasks          https://localhost:44386/api/tasks/1/subtasks/2
+      0.11 Get Report Export (use in Google Chrome)  https://localhost:44386/api/tasks/report/export?StartDate=2021-04-04T10:34
 
 4.   For Database Diagram please see:
    ```

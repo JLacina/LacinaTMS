@@ -1,4 +1,4 @@
-# Task Management System (TMS) Coding challenge Ilay (Jacek Lacina)
+# Task Management System (TMS) Coding challenge ilay (Jacek Lacina)
 First release of this Microservice would consist of API - LacinaTmsApi developed using:  
 * netcoreapp3.1, 
 * Microsoft.EntityFrameworkCore.Design  (3.1.6)

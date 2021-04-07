@@ -13,6 +13,9 @@ namespace LacinaTmsApi.Data.Migrations
         {
             _config = config;
         }
+
+        public TaskDbContext(DbContextOptions<TaskDbContext> options) : base(options) { }
+
         public DbSet<MainTask> MainTasks { get; set; }
         public DbSet<SubTask> SubTasks { get; set; }
 

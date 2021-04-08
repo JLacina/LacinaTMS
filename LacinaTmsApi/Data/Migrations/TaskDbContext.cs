@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using LacinaTmsApi.Models;
 
@@ -21,7 +22,14 @@ namespace LacinaTmsApi.Data.Migrations
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
+            try
+            {
+                optionsBuilder.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
+            }
+            catch (Exception)
+            {
+                // ignored
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

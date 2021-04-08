@@ -20,7 +20,7 @@ namespace TmsApi.Tests
                 State = null
             });
 
-            dbContext.MainTasks.Add(new MainTask
+            /*dbContext.MainTasks.Add(new MainTask
             {
                 Id = 2,
                 Name = "Testing main Name 2",
@@ -49,7 +49,7 @@ namespace TmsApi.Tests
                 FinishDate = DateTime.Today,
                 State = State.Planned,
                 MainTaskId = 1
-            });
+            });*/
 
             dbContext.SaveChanges();
         }

@@ -22,14 +22,11 @@ namespace LacinaTmsApi.Data.Migrations
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            try
-            {
+            if (!optionsBuilder.IsConfigured)
+            { 
                 optionsBuilder.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
             }
-            catch (Exception)
-            {
-                // ignored
-            }
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -39,7 +36,11 @@ namespace LacinaTmsApi.Data.Migrations
             modelBuilder.Entity<MainTask>().HasMany(m => m.SubTasks);
             modelBuilder.Entity<SubTask>().HasOne(u => u.ParentMainTask);
 
-            modelBuilder.Seed();
+            //exuding this logic from testing 
+            if (!AppDomain.CurrentDomain.IsDefaultAppDomain())
+            {
+                modelBuilder.Seed();
+            }
         }
     }
 }

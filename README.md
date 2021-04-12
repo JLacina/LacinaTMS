@@ -80,7 +80,7 @@ Follow these steps to get your development environment set up:
 
 4.   For Database Diagram please see:
    ```
-    ../LacinaTMS/Docs/DB_Diagram_LacinaTms.png
+    https://github.com/JLacina/LacinaTMS/blob/master/Docs/DB_Diagram_LacinaTms.png
   ```
   
 5.   CSV report please see:

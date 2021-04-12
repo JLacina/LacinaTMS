@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using LacinaTmsApi.Models;
 
@@ -13,12 +14,19 @@ namespace LacinaTmsApi.Data.Migrations
         {
             _config = config;
         }
+
+        public TaskDbContext(DbContextOptions<TaskDbContext> options) : base(options) { }
+
         public DbSet<MainTask> MainTasks { get; set; }
         public DbSet<SubTask> SubTasks { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
+            if (!optionsBuilder.IsConfigured)
+            { 
+                optionsBuilder.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
+            }
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -28,7 +36,11 @@ namespace LacinaTmsApi.Data.Migrations
             modelBuilder.Entity<MainTask>().HasMany(m => m.SubTasks);
             modelBuilder.Entity<SubTask>().HasOne(u => u.ParentMainTask);
 
-            modelBuilder.Seed();
+            //exuding this logic from testing 
+            if (!AppDomain.CurrentDomain.IsDefaultAppDomain())
+            {
+                modelBuilder.Seed();
+            }
         }
     }
 }
